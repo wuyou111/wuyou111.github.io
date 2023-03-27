@@ -16,7 +16,7 @@ str1为母串，str2为子串，返回char*
 
 ## 力扣第1790题
 
-- python zip函数 zip(\[iterable, ...\])
+- python zip函数 zip(\[iterable, ...\])  
 示例代码：
 ```python
 list1 = [1,2,3]
