@@ -29,6 +29,10 @@ for index,(x,y) in enumerate(zip(list1,list2)):
 # 2 3 c
 ```
 
+## 力扣第1791题
+
+- python collections.Counter、.most_common(k)
+
 
 ## markdown语法
 ### 标题编号测试1 { #1}
