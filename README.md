@@ -53,7 +53,20 @@ if 1 == 1 :
 
 emoj使用：
 
-:joy:
+:joy:  
+自动网址链接：
+www.baidu.com
+
+反引号包裹以取消自动网址链接：
+`www.baidu.com`  
+
+三个星号单独一行表示分割线：
+***
+
+链接  
+[链接显示名](https://www.baidu.com "去往百度")  
+图片  
+![这是图片名称](https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg "图片说明")
 
 
 
