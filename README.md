@@ -34,6 +34,19 @@ for index,(x,y) in enumerate(zip(list1,list2)):
 - python collections.Counter、.most_common(k)
 
 
+## 力扣第1796题
+
+- python 1<2<3 语法糖
+示例：  
+```python
+1<2<3
+1<2 and 2<3
+# 输出：
+# True
+# True
+# 也即： 1<2<3 等价于 1<2 and 2<3
+```
+
 ## markdown语法
 ### 标题编号测试1 { #1}
 *斜体*  
