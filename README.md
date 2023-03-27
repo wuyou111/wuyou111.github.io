@@ -46,6 +46,9 @@ for index,(x,y) in enumerate(zip(list1,list2)):
 # True
 # 也即： 1<2<3 等价于 1<2 and 2<3
 ```
+- 注意严格不等于
+- 注意O(n)时间复杂度求序列前k大个数，根堆思想，即：新元素入堆-->调整根堆
+
 
 ## markdown语法
 ### 标题编号测试1 { #1}
