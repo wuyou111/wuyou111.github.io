@@ -102,6 +102,11 @@ class Solution(object):
                 return middle
         return -1
 ```
+
+## 力扣第27题 
+移除元素
+- 双指针 fast 和 slow，fast遍历数组，slow作为“新”数组的下标
+
 ***
 
 
