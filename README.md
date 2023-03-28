@@ -56,7 +56,7 @@ for index,(x,y) in enumerate(zip(list1,list2)):
 - 注意right初值 是len(nums) 还是len(nums)-1
 - 注意循环条件是left<right 还是left<=right
 - 注意更新left和right时，left=middle+1,而right=middle-1 还是right=middle
-- 注意保持循环变量一致原则，也即区间一致
+- 注意保持循环变量一致原则，也即区间一致  
 两个版本示例代码  
 左闭右闭
 ```python
