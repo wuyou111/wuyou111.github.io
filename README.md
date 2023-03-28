@@ -119,6 +119,7 @@ class Solution(object):
 - python bin(n & 0x ffffffff)
 - 采用bin()函数转换为二进制的字符串时，加上一个前导零规避边界情况
 - 优化：采用位运算，n & (1<<left) 获取left指向位置的0或1
+- python 连续赋值： right = left = 0
 
 
 ***
