@@ -50,6 +50,88 @@ for index,(x,y) in enumerate(zip(list1,list2)):
 - 注意O(n)时间复杂度求序列前k大个数，根堆思想，即：新元素入堆-->调整根堆
 
 
+## 力扣第704题 
+二分查找  
+
+- 注意right初值 是len(nums) 还是len(nums)-1
+- 注意循环条件是left<right 还是left<=right
+- 注意更新left和right时，left=middle+1,而right=middle-1 还是right=middle
+- 注意保持循环变量一致原则，也即区间一致
+两个版本示例代码  
+左闭右闭
+```python
+class Solution(object):
+    def search(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: int
+        """
+        left = 0
+        right = len(nums) - 1
+        while left <= right:
+            middle = (left + right) / 2
+            if nums[middle] > target:
+                right = middle - 1
+            elif nums[middle] <target:
+                left = middle + 1
+            else:
+                return middle
+        return -1
+```
+左闭右开
+```python
+class Solution(object):
+    def search(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: int
+        """
+        left = 0
+        right = len(nums)
+        while left < right:
+            middle = (left + right) / 2
+            if nums[middle] > target:
+                right = middle
+            elif nums[middle] <target:
+                left = middle + 1
+            else:
+                return middle
+        return -1
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## markdown语法
 ### 标题编号测试1 { #1}
 *斜体*  
