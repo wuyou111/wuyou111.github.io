@@ -58,7 +58,7 @@ for index,(x,y) in enumerate(zip(list1,list2)):
 - 注意更新left和right时，left=middle+1,而right=middle-1 还是right=middle
 - 注意保持循环变量一致原则，也即区间一致  
 两个版本示例代码  
-左闭右闭
+> 左闭右闭
 ```python
 class Solution(object):
     def search(self, nums, target):
@@ -79,7 +79,7 @@ class Solution(object):
                 return middle
         return -1
 ```
-左闭右开
+> 左闭右开
 ```python
 class Solution(object):
     def search(self, nums, target):
