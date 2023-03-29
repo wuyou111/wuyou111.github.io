@@ -156,6 +156,12 @@ def lowBound(nums,target):
     return left
 ```
 
+## 力扣第34题
+在排序数组中查找元素的第一个和最后一个位置
+- 通过辅助函数lowBound，二分查找寻找第一个和最后一个位置
+- 注意 若是排序数组中没有待查找元素target，此时start == len(nums) or nums\[start\] != target
+- 注意 若start存在,end必然存在
+
 ***
 
 
