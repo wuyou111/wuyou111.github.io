@@ -162,6 +162,25 @@ def lowBound(nums,target):
 - 注意 若是排序数组中没有待查找元素target，此时start == len(nums) or nums\[start\] != target
 - 注意 若start存在,end必然存在
 
+## 力扣第35题
+搜索插入位置
+- 二分查找的运用（lowBound变体）。
+附示例代码：
+```python
+def searchInsert(self, nums, target):
+    left = 0
+    right = len(nums) - 1
+    while left <= right:
+        mid = left + (right - left) // 2
+        if nums[mid] < target:
+            left = mid + 1
+        elif nums[mid] > target:
+            right = mid - 1
+        else:
+            return mid
+    return left
+```
+
 ***
 
 
