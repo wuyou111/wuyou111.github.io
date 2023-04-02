@@ -210,6 +210,11 @@ while True:
 解码字母到整数映射
 - python ord函数和chr函数：ord('a') = 97,chr(97) = 'a'
 
+## 力扣第1576题
+替换所有的问号
+- python处理字符串一个比较合适的方式：sList = list(s)......''.join(sList),因为python中的字符串，只允许索引查询，不允许索引更改，比如print(s\[0\])是可行的，但是s\[0\]='a'这种尝试通过索引方式改变元素值，不行。
+- 如果不转换为list，以上操作可以用s.replace(oldStr,newStr,1)代替.
+
 ***
 
 
