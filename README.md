@@ -242,7 +242,31 @@ while n != 0:
 连续的子数组和
 - 思路一样为：前缀和+哈希
 - 特别注意：**公式的转换**，同余定理：若(a-b)%k == 0 当且仅当 a%k == b%k ==0。利用同余定理，将公式转换为求同余的前缀和。
+- 注意处理子数组长度大于2这一条件
 - python collections.defaultdict(lambda:-1)，用来将默认数组的默认value置为-1(你想要置为的值)
+示例代码：
+```python
+class Solution:
+    def checkSubarraySum(self, nums: List[int], k: int) -> bool:
+        ans = 0
+        l = len(nums)
+        prefix = [0] *(l+1)
+        sumCurr = 0
+        for i in range(l):
+            prefix[i] = sumCurr
+            sumCurr += nums[i]
+        prefix[-1] = sumCurr
+        mp = collections.defaultdict(lambda:-1)
+        maxP,minP = max(prefix),min(prefix)
+        for i in range(l+1):
+            n = 0
+            remainder = prefix[i] % k
+            if mp[remainder] != -1 and i - mp[remainder] >= 2:
+                return True
+            if mp[remainder] == -1:
+                mp[remainder] = i
+        return False
+```
 
 
 
