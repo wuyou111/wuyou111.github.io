@@ -248,7 +248,6 @@ while n != 0:
 ```python
 class Solution:
     def checkSubarraySum(self, nums: List[int], k: int) -> bool:
-        ans = 0
         l = len(nums)
         prefix = [0] *(l+1)
         sumCurr = 0
@@ -257,7 +256,6 @@ class Solution:
             sumCurr += nums[i]
         prefix[-1] = sumCurr
         mp = collections.defaultdict(lambda:-1)
-        maxP,minP = max(prefix),min(prefix)
         for i in range(l+1):
             n = 0
             remainder = prefix[i] % k
