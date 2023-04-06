@@ -237,6 +237,7 @@ while n != 0:
 - 思路转换：逆向思维，坏数对数量 = 所有数对数量 - 好数对数量
 - 通过以上两点，问题转化为找好数对及统计其数量，我们用哈希来做
 - 同类型题[1814. 统计一个数组中好对子的数目](https://leetcode.cn/problems/count-nice-pairs-in-an-array/)  
+  
 示例代码
 ```python
 class Solution:
