@@ -231,6 +231,25 @@ while n != 0:
 - 该题的另一解：逆向思维，一矩阵在另一矩阵的上、下、左、右时，两矩阵不重叠
 
 
+## 力扣第2364题
+统计坏数对的数目
+- 公式转换：把j-i != num\[j\] - num\[i\] 转换为num\[i\] - i != num\[j\] - j，这样把本来需要**前向寻找**的问题，转换为**当前+哈希**的问题
+- 思路转换：逆向思维，坏数对数量 = 所有数对数量 - 好数对数量
+- 通过以上两点，问题转化为找好数对及统计其数量，我们用哈希来做  
+示例代码
+```python
+class Solution:
+    def countBadPairs(self, nums: List[int]) -> int:
+        mp = collections.Counter()
+        cnt = 0
+        l = len(nums)
+        for i in range(l):
+            cnt += mp[nums[i] - i]
+            mp[nums[i] - i] += 1
+        total = l * (l-1) // 2
+        return total - cnt
+```
+
 ***
 
 
