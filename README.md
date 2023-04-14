@@ -35,7 +35,7 @@ for index,(x,y) in enumerate(zip(list1,list2)):
 
 ## 力扣第1791题
 
-- python collections.Counter、.most_common(k)、.defaultdict(int)/defaultdict(lambda:-1)
+- python collections.Counter、.most_common(k)、求交集（最小次数）：&、求并集（最大次数）：｜、相减：-、相加：+，.defaultdict(int)/defaultdict(lambda:-1)
 
 
 ## 力扣第1796题
