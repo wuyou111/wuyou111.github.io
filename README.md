@@ -327,6 +327,18 @@ class Solution:
 
 
 
+## 力扣LCP 28题
+采购方案
+- 双指针：先对nums升序排列，再设置左指针left=0和右指针right=len(nums)-1,即分别指向头尾。当left、right元素之和小于target时，此时以nums\[left\]为首，left到right内元素为另一数的数对，其和一定小于target，记录right-left，即为以nums\[left\]为首，以区间(left,right]内元素为尾的满足条件的数对个数。
+- 下一步，left右移，即此时开始统计以nums\[原left+1\]为首的满足条件的数对数量。为何不用移动right，或者说为何right右边的数也不用考虑了？**因为nums\[原left\] + nums\[right+1\]必然大于target，那么nums\[原left+1\] + nums\[right+1\]更加大于target，因为nums\[原left+1\] > nums\[原left+1\]**。所以left右移，统计以nums\[原left+1\]为首的满足条件的数对数量时，right右边的数不用考虑。
+- 思路是对穷举的改进，复杂度能到O(n)
+- 类似题：剑指 Offer 57. 和为s的两个数字
+
+## 力扣剑指 Offer 57
+和为s的两个数字
+- 哈希
+- 双指针
+
 ***
 
 
