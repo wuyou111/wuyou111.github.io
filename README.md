@@ -339,6 +339,10 @@ class Solution:
 - 哈希
 - 双指针
 
+## 力扣第125题
+验证回文串
+- python: str.isalnum()
+
 ***
 
 
