@@ -339,6 +339,10 @@ class Solution:
 - 哈希
 - 双指针
 
+## 力扣第1807题  
+替换字符串中的括号内容
+- python collections.defaultdict(lambda:'?',knowledge)、str.format_map(func)
+
 ## 力扣第125题
 验证回文串
 - python: str.isalnum()
