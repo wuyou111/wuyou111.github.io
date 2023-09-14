@@ -423,6 +423,7 @@ class Solution {
   8. 获取所有键的集合： ```javaSet<KeyType> keySet = map.keySet(); // 返回包含所有键的集合```
   9. 获取所有值的集合： ```javaCollection<ValueType> values = map.values(); // 返回包含所有值的集合 ```
   10. 判断Map是否为空： ```javaboolean isEmpty = map.isEmpty(); // 判断Map是否为空 ```
+  11. getOrDefault() 方法获取指定 key 对应对 value，如果找不到 key ，则返回设置的默认值
 
 ***
 
