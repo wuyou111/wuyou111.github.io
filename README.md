@@ -1,4 +1,4 @@
-# 力扣笔记 java笔记[./javaNote]
+# 力扣笔记 [java笔记](./javaNote)
 
 ## 力扣面试题05.02
 插入
