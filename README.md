@@ -391,8 +391,37 @@ class Solution:
 <br>
 
 # java笔记
+## java字典(Map)的使用
+示例代码
+```java
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        int[] ans = new int[2];
+        Map<Integer,Integer> map = new HashMap();
+        for(int i=0;i < nums.length;i++){
+            Object t = map.get(nums[i]);
+            if(t != null){
+                ans[0] = i;
+                ans[1] = (int)t;
+                break;
+            }
+            map.put(target - nums[i],i);
+        }
+        return ans;
 
-
+    }
+}
+```
+- 字典Map类的使用：
+  1. 创建Map对象：```javaMap<KeyType, ValueType> map = new HashMap<>(); // 创建HashMap实例```
+  2. 添加键值对： map.put(key, value); // 将键值对(key, value)添加到Map中
+  3. 获取值： ValueType value = map.get(key); // 根据键获取对应的值
+  4. 判断键是否存在： boolean containsKey = map.containsKey(key); // 判断Map中是否存在指定的键
+  5. 判断值是否存在： boolean containsValue = map.containsValue(value); // 判断Map中是否存在指定的值
+  6. 删除键值对： ValueType value = map.remove(key); // 根据键删除对应的键值对，并返回被删除的值
+  7. 遍历键值对： for (Map.Entry<KeyType, ValueType> entry : map.entrySet()) { KeyType key = entry.getKey(); ValueType value = entry.getValue(); // 处理键值对 }
+  8. 获取所有键的集合： Set<KeyType> keySet = map.keySet(); // 返回包含所有键的集合
+  9. 获取所有值的集合： Collection<ValueType> values = map.values(); // 返回包含所有值的集合 10. 判断Map是否为空： boolean isEmpty = map.isEmpty(); // 判断Map是否为空 
 
 ***
 
