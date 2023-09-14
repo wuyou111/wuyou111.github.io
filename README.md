@@ -1,5 +1,6 @@
 [力扣笔记](#力扣笔记)
-[java笔记](#jiava笔记)
+<br>
+[java笔记](#java笔记)
 
 # 力扣笔记
 
@@ -389,7 +390,7 @@ class Solution:
 <br>
 <br>
 
-## java笔记
+# java笔记
 
 
 
