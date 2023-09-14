@@ -421,7 +421,8 @@ class Solution {
   6. 删除键值对： ```javaValueType value = map.remove(key); // 根据键删除对应的键值对，并返回被删除的值```
   7. 遍历键值对： ```javafor (Map.Entry<KeyType, ValueType> entry : map.entrySet()) { KeyType key = entry.getKey(); ValueType value = entry.getValue(); // 处理键值对 }```
   8. 获取所有键的集合： ```javaSet<KeyType> keySet = map.keySet(); // 返回包含所有键的集合```
-  9. 获取所有值的集合： ```javaCollection<ValueType> values = map.values(); // 返回包含所有值的集合 10. 判断Map是否为空： boolean isEmpty = map.isEmpty(); // 判断Map是否为空 ```
+  9. 获取所有值的集合： ```javaCollection<ValueType> values = map.values(); // 返回包含所有值的集合 ```
+  10. 判断Map是否为空： ```javaboolean isEmpty = map.isEmpty(); // 判断Map是否为空 ```
 
 ***
 
