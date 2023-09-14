@@ -1,4 +1,4 @@
-# [力扣笔记](https://wuyou111.github.io/README.md) [java笔记](https://wuyou111.github.io/edit/main/javaNote)
+# [力扣笔记](https://wuyou111.github.io/README.md) [java笔记](https://wuyou111.github.io/javaNote)
 
 ## 力扣面试题05.02
 插入
