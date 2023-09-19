@@ -424,7 +424,7 @@ class Solution {
   9. 获取所有值的集合： ```javaCollection<ValueType> values = map.values(); // 返回包含所有值的集合 ```
   10. 判断Map是否为空： ```javaboolean isEmpty = map.isEmpty(); // 判断Map是否为空 ```
   11. getOrDefault() 方法获取指定 key 对应对 value，如果找不到 key ，则返回设置的默认值
-- instanceof 用法
+- instanceof 用法  
   对象引用名 instanceof 类名 ，例如 a instanceof B ，表示判断对象a的运行类型是否是B类或B的子类
 
 ***
