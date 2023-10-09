@@ -375,6 +375,57 @@ class Solution:
 - 思路：穷举
 
 
+## 力扣第234题
+回文链表
+- 用o(n)时间复杂度和o(1)空间复杂度来做，思路：快慢指针找链表中点，再把其中一半逆序（头插法），然后同时遍历比较；
+- 链表快慢指针的注意事项：
+  1. 添加哑节点作为头节点以便于统一处理；
+  2. slow和fast的初始位置为哑头节点；
+  3. while循环的条件是fast != None and fast.next != None;
+  4. 最终（while跳出后）的状态是：如果链表有偶数个节点，fast指向尾节点，slow指向第一段的最后一个节点；如果链表有奇数个节点，fast指向尾节点后的None，slow指向最中间的那个节点
+  5. 由4可知，可以通过判断fast是否为空来判断处于哪种状态，不同状态slow的位置对应不同，而不用显式判链表节点数奇偶。
+- 头插法的注意事项：插入之前应先记录当前节点的下一节点，因为当次插入完成后，当前节点的next改变，而下次循环需要*下一节点*
+示例代码
+```python3
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def isPalindrome(self, head: Optional[ListNode]) -> bool:
+        if head.next == None:
+            return True
+
+        L = ListNode(0,head)
+        fast = slow = L
+        # 快慢指针遍历
+        while fast != None and fast.next != None:
+            slow = slow.next
+            fast = fast.next.next
+        q = slow.next
+        p = head
+        L.next = None
+        # 头插逆序
+        while True:
+            t = p.next
+            p.next = L.next
+            L.next = p
+            if p == slow:
+                break
+            p = t
+        # 两种状态（奇偶）判定
+        p = L.next if fast != None else L.next.next
+        # 比较
+        while p != None:
+            if p.val != q.val:
+                return False
+            p = p.next
+            q = q.next
+        return True
+```
+
+
 ***
 
 
